@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purr-fect Birthday Surprise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&family=Pacifico&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0426e",
+                        "soft-pink": "#ffebef",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "handwritten": ["Pacifico", "cursive"],
+                        "romantic": ["Dancing Script", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',
+                        'sparkle': 'sparkle 1.5s ease-in-out infinite',
+                        'flicker': 'flicker 1.5s ease-in-out infinite alternate',
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-medium': 'float 6s ease-in-out infinite',
+                        'float-fast': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        shake: {
+                            '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                            '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                            '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                            '40%, 60%': { transform: 'translate3d(4px, 0, 0)' },
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: 0, transform: 'scale(0.5)' },
+                            '50%': { opacity: 1, transform: 'scale(1.2)' },
+                        },
+                        flicker: {
+                            '0%': { transform: 'scale(1) rotate(-1deg)', opacity: 0.9 },
+                            '20%': { transform: 'scale(1.1) rotate(1deg)', opacity: 1 },
+                            '40%': { transform: 'scale(0.9) rotate(-1deg)', opacity: 0.8 },
+                            '60%': { transform: 'scale(1.05) rotate(2deg)', opacity: 1 },
+                            '80%': { transform: 'scale(0.95) rotate(-2deg)', opacity: 0.9 },
+                            '100%': { transform: 'scale(1.1) rotate(1deg)', opacity: 1 },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) rotate(var(--tw-rotate, 0deg))' },
+                            '50%': { transform: 'translateY(-20px) rotate(calc(var(--tw-rotate, 0deg) + 2deg))' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .picnic-pattern {
+            background-color: #ffffff;
+            background-image: 
+                linear-gradient(45deg, rgba(240, 66, 110, 0.08) 25%, transparent 25%), 
+                linear-gradient(-45deg, rgba(240, 66, 110, 0.08) 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, rgba(240, 66, 110, 0.08) 75%), 
+                linear-gradient(-45deg, transparent 75%, rgba(240, 66, 110, 0.08) 75%);
+            background-size: 80px 80px;
+            background-position: 0 0, 0 40px, 40px -40px, -40px 0px;
+        }
+        .checkered-bg {
+            background-color: #ffffff;
+            background-image:  linear-gradient(45deg, #fff0f3 25%, transparent 25%, transparent 75%, #fff0f3 75%, #fff0f3), 
+                               linear-gradient(45deg, #fff0f3 25%, transparent 25%, transparent 75%, #fff0f3 75%, #fff0f3);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light font-display">
+    <div id="root"></div>
+</body>
+</html>
